@@ -13,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -26,17 +26,15 @@ export default function App() {
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-     <HashRouter>
+
       <App />
-    </HashRouter>
-   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
