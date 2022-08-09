@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes, HashRouter} from 'react-router-dom';
 import Layout from './Components/Layout';
 import Home from './Components/Pages/Index/index';
 import Login from './Components/Pages/Login/index';
@@ -32,7 +32,11 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+  <React.StrictMode>
+     <HashRouter>
+      <App />
+    </HashRouter>
+   </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
